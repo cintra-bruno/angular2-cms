@@ -19,7 +19,7 @@ const routes: Routes = [
   imports: [
     BrowserModule,
     FormsModule,
-    RouterModule.forRoot(routes)
+    RouterModule.forChild(routes)
   ],
   declarations: [
     ContentDetailComponent,

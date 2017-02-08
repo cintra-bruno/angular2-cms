@@ -17,7 +17,7 @@ const routes: Routes = [
   imports: [
     BrowserModule,
     FormsModule,
-    RouterModule.forRoot(routes),
+    RouterModule.forChild(routes),
     ContentModule
   ],
   declarations: [

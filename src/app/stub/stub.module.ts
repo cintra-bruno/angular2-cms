@@ -11,7 +11,7 @@ const routes: Routes = [
   declarations: [
     StubComponent
   ],
-  imports: [ RouterModule.forRoot(routes) ],
+  imports: [ RouterModule.forChild(routes) ],
   exports: [ RouterModule, StubComponent ]
 })
 export class StubModule { }

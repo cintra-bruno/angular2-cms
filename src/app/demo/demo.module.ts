@@ -11,7 +11,7 @@ const routes: Routes = [
   declarations: [
     DemoComponent
   ],
-  imports: [ RouterModule.forRoot(routes) ],
+  imports: [ RouterModule.forChild(routes) ],
   exports: [ RouterModule, DemoComponent ]
 })
 export class DemoModule { }
