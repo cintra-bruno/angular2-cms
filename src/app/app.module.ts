@@ -14,20 +14,25 @@ import { ContentDetailComponent }  from './content/content-detail.component';
 import { ContentService }          from './content/content.service';
 import { ContentSearchComponent }  from './content/content-search.component';
 
+import { DemoComponent } from './demo/demo.component';
+import { StubModule } from './stub/stub.module';
+
 @NgModule({
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule,
     UtilModule,
-    AppRoutingModule
+    AppRoutingModule,
+    StubModule
   ],
   declarations: [
     AppComponent,
     DashboardComponent,
     ContentDetailComponent,
     ContentsComponent,
-    ContentSearchComponent
+    ContentSearchComponent,
+    DemoComponent
   ],
   providers: [ ContentService ],
   bootstrap: [ AppComponent ]

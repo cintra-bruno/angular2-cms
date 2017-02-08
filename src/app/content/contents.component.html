@@ -5,6 +5,14 @@
     Add
   </button>
 </div>
+
+<div *ngIf="selectedContent">
+  <h2>
+    {{selectedContent.name | uppercase}} is my content
+  </h2>
+  <button (click)="gotoDetail()">View Details</button>
+</div>
+
 <ul class="contents">
   <li *ngFor="let content of contents" (click)="onSelect(content)"
       [class.selected]="content === selectedContent">
@@ -14,9 +22,3 @@
       (click)="delete(content); $event.stopPropagation()">x</button>
   </li>
 </ul>
-<div *ngIf="selectedContent">
-  <h2>
-    {{selectedContent.name | uppercase}} is my content
-  </h2>
-  <button (click)="gotoDetail()">View Details</button>
-</div>
