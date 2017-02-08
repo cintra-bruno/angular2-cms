@@ -6,13 +6,10 @@ import { AppRoutingModule } from './app-routing.module';
 
 // modules
 import { UtilModule } from './util/util.module';
+import { ContentModule } from './content/content.module';
 
 import { AppComponent }         from './app.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
-import { ContentsComponent }      from './content/contents.component';
-import { ContentDetailComponent }  from './content/content-detail.component';
-import { ContentService }          from './content/content.service';
-import { ContentSearchComponent }  from './content/content-search.component';
 
 import { DemoComponent } from './demo/demo.component';
 import { StubModule } from './stub/stub.module';
@@ -24,17 +21,15 @@ import { StubModule } from './stub/stub.module';
     HttpModule,
     UtilModule,
     AppRoutingModule,
+    ContentModule,
     StubModule
   ],
   declarations: [
     AppComponent,
     DashboardComponent,
-    ContentDetailComponent,
-    ContentsComponent,
-    ContentSearchComponent,
     DemoComponent
   ],
-  providers: [ ContentService ],
+  providers: [],
   bootstrap: [ AppComponent ]
 })
 export class AppModule { }
