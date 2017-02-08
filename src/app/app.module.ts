@@ -8,10 +8,12 @@ import { AppRoutingModule } from './app-routing.module';
 import { UtilModule } from './util/util.module';
 import { ContentModule } from './content/content.module';
 
+// experimental modules
+import { DemoModule } from './demo/demo.module';
+
 import { AppComponent }         from './app.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 
-import { DemoComponent } from './demo/demo.component';
 import { StubModule } from './stub/stub.module';
 
 @NgModule({
@@ -22,12 +24,12 @@ import { StubModule } from './stub/stub.module';
     UtilModule,
     AppRoutingModule,
     ContentModule,
+    DemoModule,
     StubModule
   ],
   declarations: [
     AppComponent,
-    DashboardComponent,
-    DemoComponent
+    DashboardComponent
   ],
   providers: [],
   bootstrap: [ AppComponent ]
