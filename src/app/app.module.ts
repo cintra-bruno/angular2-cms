@@ -6,15 +6,14 @@ import { AppRoutingModule } from './app-routing.module';
 
 // modules
 import { UtilModule } from './util/util.module';
+import { DashboardModule } from './dashboard/dashboard.module';
 import { ContentModule } from './content/content.module';
 
 // experimental modules
 import { DemoModule } from './demo/demo.module';
+import { StubModule } from './stub/stub.module';
 
 import { AppComponent }         from './app.component';
-import { DashboardComponent } from './dashboard/dashboard.component';
-
-import { StubModule } from './stub/stub.module';
 
 @NgModule({
   imports: [
@@ -23,13 +22,13 @@ import { StubModule } from './stub/stub.module';
     HttpModule,
     UtilModule,
     AppRoutingModule,
+    DashboardModule,
     ContentModule,
     DemoModule,
     StubModule
   ],
   declarations: [
-    AppComponent,
-    DashboardComponent
+    AppComponent
   ],
   providers: [],
   bootstrap: [ AppComponent ]
