@@ -1,0 +1,22 @@
+<h2>My Contents</h2>
+<div>
+  <label>Content name:</label> <input #contentName />
+  <button (click)="add(contentName.value); contentName.value=''">
+    Add
+  </button>
+</div>
+<ul class="contents">
+  <li *ngFor="let content of contents" (click)="onSelect(content)"
+      [class.selected]="content === selectedContent">
+    <span class="badge">{{content.id}}</span>
+    <span>{{content.name}}</span>
+    <button class="delete"
+      (click)="delete(content); $event.stopPropagation()">x</button>
+  </li>
+</ul>
+<div *ngIf="selectedContent">
+  <h2>
+    {{selectedContent.name | uppercase}} is my content
+  </h2>
+  <button (click)="gotoDetail()">View Details</button>
+</div>
